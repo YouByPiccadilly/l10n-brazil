@@ -197,7 +197,7 @@ class AccountFiscalPosition(models.Model):
     def onchange_type(self, type):
         type_tax = {'input': 'purchase', 'output': 'sale'}
         return {'value': {'type_tax_use': type_tax.get(type, 'all'),
-                'tax_ids': False}}
+                          'tax_ids': False}}
 
     @api.multi
     def onchange_fiscal_category_id(self, fiscal_category_id=None):
