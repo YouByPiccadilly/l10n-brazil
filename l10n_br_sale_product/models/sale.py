@@ -118,7 +118,7 @@ class SaleOrder(models.Model):
                     line.price_gross,
                     self.amount_freight,
                     line.order_id.amount_gross),
-                })
+            })
         return True
 
     @api.one
@@ -131,7 +131,7 @@ class SaleOrder(models.Model):
                     line.price_gross,
                     self.amount_insurance,
                     line.order_id.amount_gross),
-                })
+            })
         return True
 
     @api.one
@@ -144,7 +144,7 @@ class SaleOrder(models.Model):
                     line.price_gross,
                     self.amount_costs,
                     line.order_id.amount_gross),
-                })
+            })
         return True
 
     ind_pres = fields.Selection([

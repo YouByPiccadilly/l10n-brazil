@@ -106,7 +106,7 @@ class StockHistoryXls(report_xls):
                 'quantity',
                 'price_unit_on_quant',
                 'inventory_value'
-            ])
+        ])
         row_data = self.xls_row_template(c_specs, [x[0] for x in c_specs])
         row_pos = self.xls_write_row(
             ws, row_pos, row_data, row_style=self.rh_cell_style_center,
