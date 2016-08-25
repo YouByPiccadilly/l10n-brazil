@@ -28,6 +28,7 @@ from openerp.addons.l10n_br_base.tools.misc import punctuation_rm
 
 
 class NFe200(FiscalDocument):
+
     def __init__(self):
         super(NFe200, self).__init__()
         self.nfe = None
@@ -687,6 +688,7 @@ class NFe200(FiscalDocument):
 
 
 class NFe310(NFe200):
+
     def __init__(self):
         super(NFe310, self).__init__()
 

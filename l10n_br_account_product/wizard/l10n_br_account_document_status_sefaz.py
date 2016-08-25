@@ -74,7 +74,7 @@ class L10nBrAccountDocumentStatusSefaz(models.TransientModel):
                 'retCancNFe': '',
                 'procEventoNFe': '',
                 'state': 'done',
-                }
+            }
             data.write(call_result)
 
             view_rec = self.env['ir.model.data'].get_object_reference(

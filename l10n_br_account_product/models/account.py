@@ -210,7 +210,7 @@ class AccountTax(models.Model):
             icms_st_percent_reduction = result_icmsst[
                 'taxes'][0]['base_reduction']
             icms_st_base = round(((result['total'] + ipi_value) *
-                                 (1 - icms_st_percent_reduction)) *
+                                  (1 - icms_st_percent_reduction)) *
                                  (1 + result_icmsst['taxes'][0]['amount_mva']),
                                  precision)
             icms_st_base_other = round(

@@ -55,7 +55,7 @@ class L10nBrAccountProductInvoiceCostsRatio(models.TransientModel):
                             line.price_gross,
                             delivery.amount_costs_value,
                             invoice.amount_gross),
-                        }
+                    }
                     line.write(vals)
                 invoice.button_reset_taxes()
         return True

@@ -27,7 +27,7 @@ PRODUCT_FISCAL_TYPE = [
 PRODUCT_FISCAL_TYPE_DEFAULT = PRODUCT_FISCAL_TYPE[0][0]
 
 
-class L10n_brAccountFiscalCategory(models.Model):
+class L10nBrAccountFiscalCategory(models.Model):
     """Inherit class to change default value of fiscal_type field"""
     _inherit = 'l10n_br_account.fiscal.category'
 
@@ -37,7 +37,7 @@ class L10n_brAccountFiscalCategory(models.Model):
                                    default=PRODUCT_FISCAL_TYPE_DEFAULT)
 
 
-class L10n_brAccountDocumentSerie(models.Model):
+class L10nBrAccountDocumentSerie(models.Model):
     """Inherit class to change default value of fiscal_type field"""
     _inherit = 'l10n_br_account.document.serie'
 

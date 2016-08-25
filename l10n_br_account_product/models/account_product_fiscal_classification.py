@@ -250,7 +250,7 @@ class AccountProductFiscalClassification(models.Model):
                     'state_taxes': result.estadual,
                     'federal_taxes_national': result.nacional,
                     'federal_taxes_import': result.importado,
-                    }
+                }
                 if update:
                     update.write(vals)
                 else:
