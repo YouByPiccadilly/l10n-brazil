@@ -24,7 +24,7 @@ from .l10n_br_account_service import (
     PRODUCT_FISCAL_TYPE_DEFAULT)
 
 
-class L10n_brAccountFiscalCategory(models.Model):
+class L10nBrAccountFiscalCategory(models.Model):
     _inherit = 'l10n_br_account.fiscal.category'
 
     fiscal_type = fields.Selection(PRODUCT_FISCAL_TYPE, 'Tipo Fiscal',
