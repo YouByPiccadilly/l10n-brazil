@@ -7,6 +7,8 @@ import datetime
 
 from openerp import models, fields, api, _
 from openerp.exceptions import Warning as UserError
+from openerp.addons import decimal_precision as dp
+
 
 TYPE = [
     ('input', u'Entrada'),
@@ -410,6 +412,16 @@ class L10nBrAccountPartnerFiscalType(models.Model):
     icms = fields.Boolean('Recupera ICMS')
 
     ipi = fields.Boolean('Recupera IPI')
+
+    issqn_wh = fields.Boolean(u'Retém ISSQN')
+    inss_wh = fields.Boolean(u'Retém INSS')
+    pis_wh = fields.Boolean(u'Retém PIS')
+    cofins_wh = fields.Boolean(u'Retém COFINS')
+    csll_wh = fields.Boolean(u'Retém CSLL')
+    irrf_wh = fields.Boolean(u'Retém IRRF')
+    irrf_wh_percent = fields.Float(u'Retenção de IRRF (%)',
+                                   digits_compute=dp.get_precision('Discount'))
+
 
     @api.constrains('default', 'is_company')
     def _check_default(self):

@@ -43,3 +43,23 @@ class ResCompany(models.Model):
         domain="[('parent_id', '=', False)]")
     ipbt_token = fields.Char(string=u'IPBT Token')
     ibpt_update_days = fields.Integer(string=u'IPBT Token')
+
+    cofins_csll_pis_wh_base = fields.Float(
+        u'Valor mínimo COFINS/CSLL/PIS', default=0.0,
+        digits_compute=dp.get_precision('Account'))
+    irrf_wh_base = fields.Float(
+        u'Valor mínimo IRRF', default=10.0,
+        digits_compute=dp.get_precision('Account'))
+    inss_wh_base = fields.Float(
+        u'Valor mínimo INSS', default=10.0,
+        digits_compute=dp.get_precision('Account'))
+    irrf_wh_percent = fields.Float(
+        u'Taxa de IR(%)',
+        digits_compute=dp.get_precision('Discount'),
+        default=11.0)
+    irrf_wh = fields.Boolean(u'Retém IRRF')
+    issqn_wh = fields.Boolean(u'Retém ISSQN')
+    inss_wh = fields.Boolean(u'Retém INSS')
+    pis_wh = fields.Boolean(u'Retém PIS')
+    cofins_wh = fields.Boolean(u'Retém COFINS')
+    csll_wh = fields.Boolean(u'Retém CSLL')
